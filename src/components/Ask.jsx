@@ -32,8 +32,8 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           padding: "20px",
         }}
       >
-        <TextField 
-          component={""}
+        <input 
+          
           value={input}
           placeholder="Message Bot AI…"
           onChange={(e) => setInput(e.target.value)}
