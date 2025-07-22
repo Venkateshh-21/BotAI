@@ -13,7 +13,7 @@ const NavBar = () => {
         {isSmallDevice ? <MenuIcon onClick={()=>setIsSideBarOpen(prev =>!prev)} /> : ""}
         <Link style={{ textDecoration: "none" }}>
           <Typography component={"h1"} variant="h1">
-            BotAI
+            Bot AI
           </Typography>
         </Link>
       </Stack>
