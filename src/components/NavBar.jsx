@@ -5,12 +5,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 
 const NavBar = () => {
-  const { isSideBarOpen } = useOutletContext();
+  const { setIsSideBarOpen } = useOutletContext();
   const isSmallDevice = useMediaQuery("max-width:800px");
   return (
     <Stack>
       <Stack>
-        {isSmallDevice ? <MenuIcon /> : ""}
+        {isSmallDevice ? <MenuIcon onClick={()=>setIsSideBarOpen(prev =>!prev)} /> : ""}
         <Link style={{ textDecoration: "none" }}>
           <Typography component={"h1"} variant="h1">
             BotAI

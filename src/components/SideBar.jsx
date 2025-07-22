@@ -7,7 +7,7 @@ import img from "../assets/pencil.png"
 const SideBar = ({setChat,closeMenu}) => {
     const isSmallDevice=useMediaQuery(("max-width:800px"))
   return (
-    <Box>
+    <Box >
         {isSmallDevice&&<Button
         endIcon={<CloseIcon />}
         onClick={closeMenu}color='text.primary'>

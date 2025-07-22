@@ -12,7 +12,7 @@ const Card = ({ caption, heading, generateResponse }) => {
   return (
     <Stack
       direction={"row"}
-      spacing={2}
+      spacing={1}
       alignItems={"center"}
       onClick={()=>generateResponse(heading)}
       borderRadius={"8px"}
@@ -33,10 +33,11 @@ const Card = ({ caption, heading, generateResponse }) => {
           variant="heading"
           fontWeight={700}
           fontSize={{ xs: 14, md: 20 }}
+
         >
           {heading}
         </Typography>
-        <Typography color={"gray"} fontSize={{ xs: 10, md: 16 }}>
+        <Typography color={"gray"} fontSize={{ xs: 10, md: 16 }} whiteSpace={"nowrap"}>
           {caption}
         </Typography>
       </Box>
@@ -46,7 +47,7 @@ const Card = ({ caption, heading, generateResponse }) => {
 
 const InitialChat = ({ generateResponse }) => {
   return (
-    <Stack height={1} justifyContent={"flex-end"} p={{ xs: 2, md: 3 }}>
+    <Stack spacing={2} height={1} justifyContent={"flex-end"} p={{ xs: 2, md: 3 }}>
       <Stack sx={{ alignItems: "center" }} spacing={3}>
         <Typography variant="h2">How Can I Help You Today?</Typography>
         <Box
@@ -56,7 +57,7 @@ const InitialChat = ({ generateResponse }) => {
           width={{ xs: 40, md: 80 }}
         />
       </Stack>
-      <Grid container size={{ xs: 12, md: 6 }} spacing={2} >
+      <Grid container size={{ xs: 12, md: 6 }} spacing={5} width={"100%"}>
         {initlData.map((a, i) => {
           return (
             <Grid key={i} size={{ xs: 12, md: 6 }} whiteSpace={"no-wrap"} >

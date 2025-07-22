@@ -17,6 +17,7 @@ const ChatCard = ({
   const [rating, setRating] = useState(0);
   const [rated, setRated] = useState(false);
   useEffect(() => {
+    if(rated){
     setChat((prev) => {
       return prev.map((a) => {
         if (a.id == details.id) {
@@ -25,7 +26,7 @@ const ChatCard = ({
           return { ...a };
         }
       });
-    });
+    })};
   }, [rating]);
   console.log(details);
   return (

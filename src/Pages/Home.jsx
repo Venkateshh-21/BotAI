@@ -15,7 +15,6 @@ const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [shouldScrollBottom, setShouldScrollBottom] = useState(false);
 
-  console.log(chat.length);
 
   useEffect(() => {
     chatsRef.current?.lastElementChild?.scrollIntoView();
