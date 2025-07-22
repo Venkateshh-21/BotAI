@@ -8,7 +8,7 @@ const NavBar = () => {
   const { setIsSideBarOpen } = useOutletContext();
   const isSmallDevice = useMediaQuery("max-width:800px");
   return (
-    <Stack>
+    <Stack component={"header"}>
       <Stack>
         {isSmallDevice ? <MenuIcon onClick={()=>setIsSideBarOpen(prev =>!prev)} /> : ""}
         <Link style={{ textDecoration: "none" }}>
