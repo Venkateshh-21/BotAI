@@ -38,8 +38,8 @@ const ChatCard = ({
         src={details.type == "user" ? user : ai}
       />
       <Stack>
-        <Typography variant="heading" fontWeight={600}>{details.type == "user" ? "You" : "Soul AI"}</Typography>
-        <Typography>{details.text}</Typography>
+        <Typography component={"span"} variant="heading" fontWeight={600}>{details.type == "user" ? "You" : "Soul AI"}</Typography>
+        <Typography component={"p"}>{details.text}</Typography>
         <Typography>{format(details.time, "hh:mm a")}</Typography>
         {details.type !== "user" && !fromHistory && (
           <Stack direction={"row"} className="feedback-btns" spacing={1}>
