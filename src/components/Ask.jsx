@@ -32,7 +32,7 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           padding: "20px",
         }}
       >
-        <TextField 
+        <input
           type="text"
           value={input}
           placeholder="Message Bot AI…"
@@ -42,12 +42,12 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           required
    
         />
-        <Box sx={{display:"flex",gap:"10px"}}>
-        <Button type="submit" variant="contained">
+        
+        <button type="submit" >
           Ask
-        </Button>
-        <Button variant="contained" type="button" onClick={saveToLocal}>Save</Button>
-        </Box>
+        </button>
+        <button variant="contained" type="button" onClick={saveToLocal}>Save</button>
+        
       </form>
     </Box>
   );
