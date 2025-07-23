@@ -71,7 +71,7 @@ const ChatCard = ({
             />
           </Box>
         )}
-        {details.feedback && (
+        {details.feedBack && (
                     <Typography
                         pt={1}
                         fontSize={{ xs: 10, md: 16 }}
@@ -80,7 +80,7 @@ const ChatCard = ({
                             Feedback:
                         </Box>
                         <Box component={'span'}>
-                            {` ${details.feedback}`}
+                            {` ${details.feedBack}`}
                         </Box>
                     </Typography>
                 )}
