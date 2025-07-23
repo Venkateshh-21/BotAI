@@ -40,10 +40,12 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           sx={{ width: "60vw" }}
            inputProps={{ "placeholder": "Message Bot AI..." }}
         />
+        <Box sx={{display:"flex",gap:"10px"}}>
         <Button type="submit" variant="contained">
           Ask
         </Button>
         <Button variant="contained" type="button" onClick={saveToLocal}>Save</Button>
+        </Box>
       </form>
     
   );
