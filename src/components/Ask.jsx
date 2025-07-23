@@ -38,7 +38,7 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           placeholder="Message Bot AI…"
           onChange={(e) => setInput(e.target.value)}
           
-          
+          id="ask-input"
           required
    
         />
