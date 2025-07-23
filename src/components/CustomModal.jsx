@@ -31,7 +31,7 @@ const CustomModal = ({ setChat, selChatId, isModalOpen, setIsModalOpen }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     setChat((prev) => {
-      prev.map((a) => {
+    return  prev.map((a) => {
         if (a.id == selChatId) {
           return { ...a, feedBack: input };
         } else {
@@ -39,6 +39,8 @@ const CustomModal = ({ setChat, selChatId, isModalOpen, setIsModalOpen }) => {
         }
       });
     });
+    setInput("")
+    setIsModalOpen(false)
   };
   return (
     <Modal

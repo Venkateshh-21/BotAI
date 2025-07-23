@@ -21,7 +21,7 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
   };
 
   return (
-    <div>
+    
       <form
         onSubmit={handleSubmit}
         style={{
@@ -44,7 +44,7 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
         </Button>
         <Button variant="contained" type="button" onClick={saveToLocal}>Save</Button>
       </form>
-    </div>
+    
   );
 };
 
