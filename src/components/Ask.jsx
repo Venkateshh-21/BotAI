@@ -33,11 +33,12 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
         }}
       >
         <TextField 
-          
+          type="text"
           value={input}
           placeholder="Message Bot AI…"
           onChange={(e) => setInput(e.target.value)}
-          sx={{ width: "60vw" }}
+          // sx={{ width: "60vw" }}
+          fullWidth
            inputProps={{ "placeholder": "Message Bot AI..." }}
         />
         <Box sx={{display:"flex",gap:"10px"}}>
