@@ -4,7 +4,10 @@ import { Link } from "react-router";
 
 const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
   const [input, setInput] = useState("");
-
+  const inputRef=useRef(null)
+useEffect(()=>{
+  inputRef.current.focus()
+})
   const handleSubmit = (e) => {
     e.preventDefault();
     generateResponse(input);
@@ -40,7 +43,7 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           // sx={{ width: "60vw" }}
           fullWidth
           required
-           
+           inputRef={inputRef}
         />
         <Box sx={{display:"flex",gap:"10px"}}>
         <Button type="submit" variant="contained">
