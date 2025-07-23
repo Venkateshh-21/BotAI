@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-import { Box, Stack, Typography, Grid,  } from "@mui/material";
+import { Box, Stack, Typography, Grid } from "@mui/material";
 const initlData = [
   "Hi, what is the weather",
   "Hi, what is my location",
@@ -11,43 +11,57 @@ const subHead = "Get immediate AI generated response";
 const Card = ({ caption, heading, generateResponse }) => {
   return (
     <Stack
-      direction={"row"}
+    p={4}
+      width={"auto"}
       spacing={1}
       alignItems={"center"}
-      onClick={()=>generateResponse(heading)}
+      justifyContent={"center"}
+      onClick={() => generateResponse(heading)}
       borderRadius={"8px"}
       bgcolor={"white"}
-       sx={{
-                '&:hover .MuiIconButton-root': {
-                    opacity: 2
-                },
-                cursor: 'pointer',
-                '&:hover' : {
-                    bgcolor:'primary.bglight'
-                },
-                
-            }}
+      whiteSpace={"nowrap"}
+      sx={{
+        "&:hover .MuiIconButton-root": {
+          opacity: 2,
+        },
+        cursor: "pointer",
+        "&:hover": {
+          bgcolor: "primary.bglight",
+        },
+      }}
     >
-      <Box >
+      
         <Typography
           variant="heading"
           fontWeight={700}
           fontSize={{ xs: 14, md: 20 }}
-
         >
           {heading}
         </Typography>
-        <Typography color={"gray"} fontSize={{ xs: 10, md: 16 }} whiteSpace={"nowrap"}>
+        <Typography
+          color={"gray"}
+          fontSize={{ xs: 10, md: 14 }}
+        
+          sx={{
+            whiteSpace: "nowrap",
+           
+          }}
+        >
           {caption}
         </Typography>
-      </Box>
+      
     </Stack>
   );
 };
 
 const InitialChat = ({ generateResponse }) => {
   return (
-    <Stack spacing={2} height={1} justifyContent={"flex-end"} p={{ xs: 2, md: 3 }}>
+    <Stack
+      spacing={2}
+      height={1}
+      justifyContent={"flex-end"}
+      p={{ xs: 2, md: 3 }}
+    >
       <Stack sx={{ alignItems: "center" }} spacing={3}>
         <Typography variant="h2">How Can I Help You Today?</Typography>
         <Box
@@ -57,10 +71,10 @@ const InitialChat = ({ generateResponse }) => {
           width={{ xs: 40, md: 80 }}
         />
       </Stack>
-      <Grid container size={{ xs: 12, md: 6 }} spacing={5} width={"100%"}>
+      <Grid container size={{ xs: 12, md: 12 }} spacing={5} width={"100%"}>
         {initlData.map((a, i) => {
           return (
-            <Grid key={i} size={{ xs: 12, md: 6 }} whiteSpace={"no-wrap"} >
+            <Grid key={i} size={{ xs: 12, md: 6 }} >
               <Card
                 heading={a}
                 caption={subHead}
