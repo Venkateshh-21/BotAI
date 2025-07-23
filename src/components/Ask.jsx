@@ -22,9 +22,9 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
 
   return (
      <Box flexShrink={0}>
-      <form
+      <Box component={"form"}
         onSubmit={handleSubmit}
-        style={{
+        sx={{
           marginBottom: "3px",
           display: "flex",
           alignItems: "center",
@@ -32,23 +32,23 @@ const Ask = ({ chat, generateResponse, setShouldScrollBottom, clearChat }) => {
           padding: "20px",
         }}
       >
-        <input
+        <TextField 
           type="text"
           value={input}
           placeholder="Message Bot AI…"
           onChange={(e) => setInput(e.target.value)}
-          
-          id="ask-input"
+          // sx={{ width: "60vw" }}
+          fullWidth
           required
-   
+           
         />
-        
-        <button type="submit" >
+        <Box sx={{display:"flex",gap:"10px"}}>
+        <Button type="submit" variant="contained">
           Ask
-        </button>
-        <button variant="contained" type="button" onClick={saveToLocal}>Save</button>
-        
-      </form>
+        </Button>
+        <Button variant="contained" type="button" onClick={saveToLocal}>Save</Button>
+        </Box>
+      </Box>
     </Box>
   );
 };
