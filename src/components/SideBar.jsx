@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import icon from "../assets/minlogo.png"
 import img from "../assets/pencil.png"
 const SideBar = ({setChat,closeMenu}) => {
-    const isSmallDevice=useMediaQuery(("max-width:800px"))
+    const isSmallDevice=useMediaQuery("(max-width:800px)")
   return (
     <Box >
         {isSmallDevice&&<Button

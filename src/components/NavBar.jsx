@@ -6,7 +6,7 @@ import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 
 const NavBar = () => {
   const { setIsSideBarOpen } = useOutletContext();
-  const isSmallDevice = useMediaQuery("max-width:800px");
+  const isSmallDevice = useMediaQuery("(max-width:800px)");
   return (
     
       <Stack component={"header"}>

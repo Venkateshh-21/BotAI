@@ -53,7 +53,7 @@ const Home = () => {
   console.log(chat.length);
   return (
     <Stack
-      width={{ sm: 4, md: 2, lg: 1 }}
+      width={{ sm: "100vw", md: "80vw", lg: "75vw" }}
       sx={{
         height: "100vh",
         background: "linear-gradient(  #EDE4FF 10%, #F9FAFA 90%)",

@@ -15,7 +15,7 @@ const Pastconvo = () => {
   }, []);
   console.log(chats.length)
   return (
-    <Stack paddingLeft={"30px"} paddingTop={"20px"}height={"100vh"} spacing={1}>
+    <Stack paddingLeft={"30px"} paddingTop={"20px"} spacing={1}>
       <NavBar />
       <Stack spacing={2}>
         <Typography
